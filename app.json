@@ -1,0 +1,8 @@
+{
+  "name":"manga-comic-app",
+  "scripts":{},
+  "env":{},
+  "addons":[
+    "heroku-postgresql"
+  ]
+}

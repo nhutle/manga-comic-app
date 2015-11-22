@@ -1,0 +1,8 @@
+Scrapy==1.0.3
+service-identity==14.0.0
+cffi==1.1.0
+scrapy-fake-useragent==0.0.1
+Unidecode==0.04.18
+boto==2.38.0
+Django==1.8.6
+
