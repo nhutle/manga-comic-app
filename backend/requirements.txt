@@ -5,4 +5,5 @@ scrapy-fake-useragent==0.0.1
 Unidecode==0.04.18
 boto==2.38.0
 Django==1.8.6
+scrapy-djangoitem==1.0.0
 

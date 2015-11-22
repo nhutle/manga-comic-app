@@ -11,7 +11,7 @@ from scrapy.item import Item, Field
 # from
 
 
-# class MangaItemDjango(DjangoItem):
+# # class MangaItemDjango(DjangoItem):
 #     django_model = Manga
 
 

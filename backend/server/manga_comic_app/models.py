@@ -13,11 +13,11 @@ class Translator(models.Model):
 
 class Manga(models.Model):
     title = models.CharField(max_length=200)
-    # author = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
     # authors = models.ManyToManyField(
     #     Author, through='MangaAuthor',
     #     through_fields=('manga', 'author'))
-    # translator = models.CharField(max_length=200)
+    translator = models.CharField(max_length=200)
     # translators = models.ManyToManyField(
     #     Translator, through='MangaTranslator',
     #     through_fields=('manga', 'translator'))
