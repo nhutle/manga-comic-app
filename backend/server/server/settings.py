@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'manga_comic_app'
+    'django_app'
 )
 
 MIDDLEWARE_CLASSES = (
