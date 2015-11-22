@@ -9,16 +9,20 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapyproduct'
+BOT_NAME = 'crawler_app'
 
-SPIDER_MODULES = ['scrapyproduct.spiders']
-NEWSPIDER_MODULE = 'scrapyproduct.spiders'
+SPIDER_MODULES = ['crawler_app.spiders']
+NEWSPIDER_MODULE = 'crawler_app.spiders'
 
 FEED_FORMAT = 'json'
 FEED_URI = 'output/json/%(name)s_%(time)s.json'
 
 # IMAGES_STORE = 's3://manga-comic-app/'
 IMAGES_STORE = 'output/images'
+
+DOWNLOAD_HANDLERS = {
+    's3': None
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'scrapyproduct (+http://www.yourdomain.com)'
@@ -68,7 +72,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapyproduct.pipelines.DownloadImagesPipeline': 1
+    'crawler_app.pipelines.DownloadImagesPipeline': 1
 }
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

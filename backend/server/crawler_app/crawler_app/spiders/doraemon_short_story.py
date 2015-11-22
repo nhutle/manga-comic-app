@@ -12,7 +12,7 @@ from scrapy.http.request import Request
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 
-from scrapyproduct.items import MangaMiniItem, MangaItem
+from crawler_app.items import MangaMiniItem, MangaItem
 
 
 class DoraemonShortStorySpider(Spider):
