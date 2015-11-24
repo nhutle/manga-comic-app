@@ -36,7 +36,7 @@ class DownloadImagesPipeline(ImagesPipeline):
 
     def file_path(self, request, response=None, info=None):
         item = request.meta.get('item')
-        is_cover_img = request.meta.get('is_cover_img')
+        is_cover_img = request.meta.get('is_cover_img', False)
         img_index = request.meta.get('img_index', 0)
         subdir = info.spider.name
 

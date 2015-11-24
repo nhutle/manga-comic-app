@@ -92,6 +92,9 @@ class DoraemonShortStorySpider(Spider):
 
         item['img_urls'] = []
         for img in sel.css('.vung_doc').xpath('img'):
+            if img.css('.caucav1'):
+                continue
+
             item['img_urls'].append(img.xpath('@src').extract()[0])
 
         yield item
