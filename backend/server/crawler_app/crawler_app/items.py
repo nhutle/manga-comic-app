@@ -6,7 +6,16 @@ Scrapy model
 @author Nhut Le
 """
 
+import sys
+sys.path.append('/backend/server/django_app')
+
 from scrapy.item import Item, Field
+# from scrapy_djangoitem import DjangoItem
+# from
+
+
+# # class MangaItemDjango(DjangoItem):
+#     django_model = Manga
 
 
 class MangaMiniItem(Item):

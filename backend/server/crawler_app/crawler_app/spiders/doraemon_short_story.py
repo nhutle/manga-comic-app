@@ -12,7 +12,7 @@ from scrapy.http.request import Request
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 
-from scrapyproduct.items import MangaMiniItem, MangaItem
+from crawler_app.items import MangaMiniItem, MangaItem
 
 
 class DoraemonShortStorySpider(Spider):
@@ -92,6 +92,9 @@ class DoraemonShortStorySpider(Spider):
 
         item['img_urls'] = []
         for img in sel.css('.vung_doc').xpath('img'):
+            if img.css('.caucav1'):
+                continue
+
             item['img_urls'].append(img.xpath('@src').extract()[0])
 
         yield item

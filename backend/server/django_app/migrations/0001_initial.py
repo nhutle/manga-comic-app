@@ -37,6 +37,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(max_length=200)),
+                ('author', models.CharField(max_length=200)),
+                ('translator', models.CharField(max_length=200)),
                 ('status', models.CharField(max_length=100)),
                 ('story_line', models.TextField(max_length=10000)),
                 ('cover_img_url', models.TextField(max_length=500)),
@@ -69,16 +71,6 @@ class Migration(migrations.Migration):
             model_name='mangatranslator',
             name='translator',
             field=models.ForeignKey(to='manga_comic_app.Translator'),
-        ),
-        migrations.AddField(
-            model_name='manga',
-            name='authors',
-            field=models.ManyToManyField(to='manga_comic_app.Author', through='manga_comic_app.MangaAuthor'),
-        ),
-        migrations.AddField(
-            model_name='manga',
-            name='translators',
-            field=models.ManyToManyField(to='manga_comic_app.Translator', through='manga_comic_app.MangaTranslator'),
         ),
         migrations.AddField(
             model_name='chapter',
