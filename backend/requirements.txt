@@ -1,4 +1,4 @@
-Scrapy==1.0.3
+Scrapy==2.6.1
 service-identity==14.0.0
 cffi==1.1.0
 scrapy-fake-useragent==0.0.1
